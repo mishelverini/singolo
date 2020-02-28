@@ -47,9 +47,31 @@ body {
     background-color: #323746;
 }
 .slider {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 594px;
     padding: 0 40px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
     background-color: #f06c64;
+}
+.slider__left:hover {
+    cursor: pointer;
+}
+.slider__right:hover {
+    cursor: pointer;
+}
+.slider__phone-vertical {
+    position: absolute;
+    top: 53px;
+    left: 112px;
+}
+.slider__phone-horizontal {
+    position: absolute;
+    left: 425px;
+    top: 174px;
 }
 .separator-line_color_pink {
     background-color: #ea676b;
