@@ -128,13 +128,18 @@ body {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 187px 187px 187px;
+	grid-template-rows: 187px 187px 187px;
+	grid-auto-rows: 0px;
+	overflow: hidden;
 }
 .portfolio__gallery {
-    margin-top: 20px;
+	margin-top: 20px;
 }
 .gallery_item {
     margin-top: -1px;
+}
+.gallery_item:nth-child(1n+13) {
+	margin-top: 1px;
 }
 .separator {
     height: 6px;
