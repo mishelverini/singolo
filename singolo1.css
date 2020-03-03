@@ -112,6 +112,11 @@ body {
     font-weight: bold;
     color: white;
 }
+.navigation__link:hover {
+    color: #81cfd9;
+    border-bottom: 1px solid #dee02d;
+    margin-bottom: -1px;
+}
 .navigation__link_active {
     color: #f06c64;
 }
