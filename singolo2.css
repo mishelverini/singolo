@@ -152,19 +152,23 @@ body {
     color: #666d89;
     background-color: #f2f2f2;
 }
+.about__header-section {
+    padding-top: 62px;
+}
 .workers {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
 }
 .about__workers {
-    margin-top: 45px;
+    margin-top: 46px;
 }
 .workers__workers-card {
     margin-bottom: 65px;
 }
 .workers-card__title {
     margin-top: 15px;
+    margin-left: -1px;
     font-size: 18px;
     font-weight: 900;
 }
@@ -174,8 +178,11 @@ body {
     line-height: 1.7;
 }
 .workers-card__icon {
-    margin-top: 24px;
-    margin-right: 5px;
+    margin-top: 23px;
+    margin-right: 4px;
+}
+.workers-card__icon:hover {
+    background-color: rgb(240, 232, 0);
 }
 .workers-card:nth-child(2) .workers-card__photo {
     margin-left: -1px;
