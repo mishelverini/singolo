@@ -173,8 +173,8 @@ body {
 .social-icon-item {
     margin-right: 4px;
 }
-.workers-card__icon:hover {
-    background-color: rgb(240, 232, 0);
+.social-icon-item:hover {
+    fill: rgb(240, 232, 0);
 }
 .workers-card:nth-child(2) .workers-card__photo {
     margin-left: -1px;
