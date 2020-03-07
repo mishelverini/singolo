@@ -151,8 +151,14 @@ input:valid:not([name=subject]) {
 .social-icon {
     margin-top: 23px;
 }
+.footer-main__social-icon {
+    padding-bottom: 20px;
+}
 .social-icon-item {
     margin-right: 4px;
+}
+.social-icon-item:last-child {
+    margin-right: 0px;
 }
 .social-icon-item:hover {
     fill: rgb(240, 232, 0);
