@@ -27,7 +27,7 @@
 	font-style: normal;
 }
 
-/* reset-css */
+/*---------- reset-css ----------*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -72,7 +72,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 } 
-/* reset-css */
+/*---------- reset-css ----------*/
 
 .visually-hidden {
     position: absolute;
@@ -90,11 +90,7 @@ body {
 
 /*---------- Independent section block bem PAGE-SECTION ----------*/
 .page-section {
-    background-color: #f2f2f2;
     padding: 62px 40px;
-}
-.page-section_color_grey {
-    color: #666d89;
 }
 .title-section {
     font-size: 30px;
@@ -106,11 +102,46 @@ body {
     line-height: 1.7;
     word-spacing: 1.1px;
 }
+/* mixin text-section in page-section */
 .page-section__text-section {
     margin-top: 20px;
 }
+/* mixin text-section in page-section */
+
+/*- Modificator pege-section -*/
+
+/* background-color */
+.page-section_bg_light-grey {
+    background-color: #f2f2f2;
+}
+.page-section_bg_grey {
+    background-color: #2e303c;
+}
+/* background-color */
+
+/* text-color */
+.page-section_color_grey {
+    color: #666d89;
+}
+/* text-color */
+
+/* margin-bottom section */
+.page-section_mb_m {
+    padding-bottom: 67px;
+}
+.page-section_mb_s {
+    padding-bottom: 65px;
+}
+.page-section_mb_xs {
+    padding-bottom: 18px;
+}
+/* margin-bottom section */
+
+/*- Modificator pege-section -*/
+
 /*---------- Independent section block bem PAGE-SECTION ----------*/
 
+/*---------- Independent section block bem HEADER ----------*/
 .header {
     height: 90px;
     background-color: #2d303a;
@@ -119,6 +150,7 @@ body {
     align-items: center;
     padding: 0 40px;
 }
+/*----- Independent section block bem LOGO -----*/
 .logo {
     text-transform: uppercase;
     text-decoration: none;
@@ -126,12 +158,18 @@ body {
     font-weight: 700;
     color: white;
 }
-.header__logo {
-    margin-top: -1px;
-}
 .logo__decoration {
     color: #f06c64;
 }
+/* mixin logo in header */
+.header__logo {
+    margin-top: -1px;
+}
+/* mixin logo in header */
+
+/*----- Independent section block bem LOGO -----*/
+
+/*----- Independent section block bem NAVIGATION -----*/
 .navigation {
     display: flex;
     padding-top: 5px;
@@ -155,6 +193,11 @@ body {
     margin: 0 12px;
     color: #494e62;
 }
+/*----- Independent section block bem NAVIGATION -----*/
+
+/*---------- Independent section block bem HEADER ----------*/
+
+/*---------- Independent section block bem SLIDER ----------*/
 .slider {
     position: relative;
     display: flex;
@@ -185,6 +228,9 @@ body {
     left: 425px;
     top: 174px;
 }
+/*---------- Independent section block bem SLIDER ----------*/
+
+/*---------- Independent section block bem LAYOUT-3-COLUMN ----------*/
 .layout-3-column {
     display: flex;
     flex-wrap: wrap;
@@ -221,9 +267,7 @@ body {
     font-size: 12px;
     line-height: 1.8;
 }
-.page-section_bg_grey {
-    background-color: #2e303c;
-}
+/*---------- Independent section block bem LAYOUT-3-COLUMN ----------*/
 .tag-list {
     display: flex;
     font-size: 12px;
@@ -262,12 +306,6 @@ body {
 }
 .gallery_item:nth-child(1n+13) {
 	margin-top: 1px;
-}
-/* .separator {
-    height: 6px;
-} */
-.separator_gray {
-    background-color: #323746;
 }
 .workers {
     display: grid;
@@ -398,6 +436,8 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
+/*---------- Validation input style ----------*/
 textarea,
 input {
     outline: none;
@@ -411,12 +451,8 @@ input {
 input:valid:not([name=subject]) {
     box-shadow: inset 0 0 5px 0 rgb(0, 162, 24);
 }
-.separator {
-    height: 6px;
-}
-.separator_pink {
-    background-color: #ea676b;
-}
+/*---------- Validation input style ----------*/
+
 .footer-main {
     display: flex;
     justify-content: space-between;
@@ -443,6 +479,9 @@ input:valid:not([name=subject]) {
 .social-icon-item:hover {
     fill: rgb(240, 232, 0);
 }
+.separator_pink {
+    background-color: #ea676b;
+}
 .separator {
     height: 5px;
 }
@@ -464,17 +503,6 @@ input:valid:not([name=subject]) {
 .separator_white {
     background-color: white;
 }
-
-/* zzzzzzzzzzzzz */
-
-.m {
-    padding-bottom: 67px;
+.separator_gray {
+    background-color: #323746;
 }
-.l {
-    padding-bottom: 65px;
-}
-.s {
-    padding-bottom: 18px;
-}
-
-/* zzzzzzzzzzzzz */
