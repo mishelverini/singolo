@@ -117,11 +117,17 @@ body {
 .page-section_bg_grey {
     background-color: #2e303c;
 }
+.page-section_bg_pink {
+    background-color: #f06c64;
+}
 /* background-color */
 
 /* text-color */
 .page-section_color_grey {
     color: #666d89;
+}
+.page-section_color_pink {
+    color: #f0d8d9;
 }
 /* text-color */
 
@@ -268,13 +274,17 @@ body {
     line-height: 1.8;
 }
 /*---------- Independent section block bem LAYOUT-3-COLUMN ----------*/
+
+/*---------- Independent section block bem TAG-LIST ----------*/
 .tag-list {
     display: flex;
     font-size: 12px;
 }
+/* mixin tag-list in page section */
 .page-section__tag-list {
     margin-top: 12px;
 }
+/* mixin tag-list in page section */
 .tag-list__item {
     margin-right: 10px;
     box-sizing: border-box;
@@ -282,6 +292,7 @@ body {
     padding: 4px 6.2px;
     border-radius: 5px;
 }
+/* tag-list intaractive element */
 .tag-list__item:hover {
     cursor: pointer;
     background-color: rgb(240, 232, 0);
@@ -290,6 +301,11 @@ body {
     color: white;
     border-color: white;
 }
+/* tag-list intaractive element */
+
+/*---------- Independent section block bem TAG-LIST ----------*/
+
+/*---------- Independent section block bem GALLERY ----------*/
 .gallery {
     display: grid;
     grid-gap: 20px;
@@ -298,23 +314,30 @@ body {
 	grid-auto-rows: 0px;
 	overflow: hidden;
 }
+/* mixin gallery in page-section */
 .page-section__gallery {
 	margin-top: 20px;
 }
-.gallery_item {
+/* mixin gallery in page-section */
+.gallery__item {
     margin-top: -1px;
 }
-.gallery_item:nth-child(1n+13) {
+.gallery__item:nth-child(1n+13) {
 	margin-top: 1px;
 }
+/*---------- Independent section block bem GALLERY ----------*/
+
+/*---------- Independent section block bem WORKERS ----------*/
 .workers {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
 }
+/* mixin workers in page-section */
 .page-section__workers {
     margin-top: 46px;
 }
+/* mixin workers in page-section */
 .workers-card__title {
     margin-top: 15px;
     margin-left: -1px;
@@ -326,28 +349,34 @@ body {
     font-size: 12px;
     line-height: 1.7;
 }
+.workers-card:nth-child(2) .workers-card__photo {
+    margin-left: -1px;
+}
+
+/*----- Independent section block bem SOCIAL-ICON -----*/
 .social-icon {
     margin-top: 23px;
 }
 .social-icon-item {
     margin-right: 4px;
 }
+.social-icon-item:last-child {
+    margin-right: 0px;
+}
 .social-icon-item:hover {
     fill: rgb(240, 232, 0);
 }
-.workers-card:nth-child(2) .workers-card__photo {
-    margin-left: -1px;
-}
-.page-section_font_pink {
-    color: #f0d8d9;
-}
-.page-section_bg_pink {
-    background-color: #f06c64;
-}
+/*----- Independent section block bem SOCIAL-ICON -----*/
+
+/*---------- Independent section block bem WORKERS ----------*/
+
+/*---------- Independent section block bem FEEDBACK ----------*/
 .feedback {
     display: flex;
     padding-top: 44px;
 }
+
+/*----- Independent section block bem FORM-QUESTION -----*/
 .form-question {
     display: flex;
     flex-wrap: wrap;
@@ -370,10 +399,8 @@ body {
     font-size: 12px;
     padding: 11px 14px;
 }
-::placeholder {
-    color: #f48c8f;
-    font-size: 12px;
-}
+/*----- Independent section block bem FORM-QUESTION -----*/
+
 .contact-info {
     width: 34%;
     padding-left: 20px;
@@ -424,6 +451,8 @@ body {
 .contact-wrapper:last-child .img-wrapper img {
     margin-top: 2px;
 }
+
+/*----- Independent section block bem BUTTON -----*/
 .button {
     background-color: #2d303a;
     color: #f0d8d9;
@@ -436,8 +465,13 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+/*----- Independent section block bem BUTTON -----*/
 
-/*---------- Validation input style ----------*/
+/*- Validation input style -*/
+::placeholder {
+    color: #f48c8f;
+    font-size: 12px;
+}
 textarea,
 input {
     outline: none;
@@ -451,8 +485,9 @@ input {
 input:valid:not([name=subject]) {
     box-shadow: inset 0 0 5px 0 rgb(0, 162, 24);
 }
-/*---------- Validation input style ----------*/
+/*- Validation input style -*/
 
+/*---------- Independent section block bem FEEDBACK ----------*/
 .footer-main {
     display: flex;
     justify-content: space-between;
@@ -464,33 +499,31 @@ input:valid:not([name=subject]) {
 .footer-main__copyright {
     margin-left: 2px;
 }
-.social-icon {
+/* mixin social-icon in footer-main */
+.footer-main__social-icon {
     margin-top: 23px;
 }
 .footer-main__social-icon {
     padding-bottom: 20px;
 }
-.social-icon-item {
-    margin-right: 4px;
-}
-.social-icon-item:last-child {
-    margin-right: 0px;
-}
-.social-icon-item:hover {
-    fill: rgb(240, 232, 0);
-}
-.separator_pink {
-    background-color: #ea676b;
-}
-.separator {
-    height: 5px;
-}
+/* mixin social-icon in footer-main */
+
+/*---------- Independent section block bem FEEDBACK ----------*/
+
+/*---------- Independent section block bem SEPARATOR ----------*/
+
+/*- Modificator separator -*/
+
+/* size separator */
 .separator_size_5 {
     height: 5px;
 }
 .separator_size_6 {
     height: 6px;
 }
+/* size separator */
+
+/* color separator */
 .separator_color_gray {
     background-color: #323746;
 }
@@ -500,9 +533,8 @@ input:valid:not([name=subject]) {
 .separator_color_white {
     background-color: white;
 }
-.separator_white {
-    background-color: white;
-}
-.separator_gray {
-    background-color: #323746;
-}
+/* color separator */
+
+/*- Modificator separator -*/
+
+/*---------- Independent section block bem SEPARATOR ----------*/
