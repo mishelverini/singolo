@@ -162,7 +162,7 @@ body {
 }
 .page-section {
     background-color: #f2f2f2;
-    padding: 61px 40px;
+    padding: 62px 40px;
 }
 .page-section_color_grey {
     color: #666d89;
@@ -178,7 +178,7 @@ body {
     word-spacing: 1.1px;
 }
 .page-section__text-section {
-    margin-top: 21px;
+    margin-top: 20px;
 }
 .layout-3-column {
     display: flex;
@@ -216,10 +216,92 @@ body {
     font-size: 12px;
     line-height: 1.8;
 }
+.page-section_bg_grey {
+    background-color: #2e303c;
+}
+.tag-list {
+    display: flex;
+    font-size: 12px;
+}
+.page-section__tag-list {
+    margin-top: 12px;
+}
+.tag-list__item {
+    margin-right: 10px;
+    box-sizing: border-box;
+    border: 1px solid #666d89;
+    padding: 4px 6.2px;
+    border-radius: 5px;
+}
+.tag-list__item:hover {
+    cursor: pointer;
+    background-color: rgb(240, 232, 0);
+}
+.tag-list-item_active {
+    color: white;
+    border-color: white;
+}
+.gallery {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 187px 187px 187px;
+	grid-auto-rows: 0px;
+	overflow: hidden;
+}
+.page-section__gallery {
+	margin-top: 20px;
+}
+.gallery_item {
+    margin-top: -1px;
+}
+.gallery_item:nth-child(1n+13) {
+	margin-top: 1px;
+}
+/* .separator {
+    height: 6px;
+} */
+.separator_gray {
+    background-color: #323746;
+}
+.workers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+.page-section__workers {
+    margin-top: 46px;
+}
+.workers-card__title {
+    margin-top: 15px;
+    margin-left: -1px;
+    font-size: 18px;
+    font-weight: 900;
+}
+.workers-card__text {
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 1.7;
+}
+.social-icon {
+    margin-top: 23px;
+}
+.social-icon-item {
+    margin-right: 4px;
+}
+.social-icon-item:hover {
+    fill: rgb(240, 232, 0);
+}
+.workers-card:nth-child(2) .workers-card__photo {
+    margin-left: -1px;
+}
 .separator {
     height: 5px;
 }
-.main .separator:nth-child(3) {
+.separator_size_5 {
+    height: 5px;
+}
+.separator_size_6 {
     height: 6px;
 }
 .separator_color_gray {
@@ -231,3 +313,14 @@ body {
 .separator_color_white {
     background-color: white;
 }
+.separator_white {
+    background-color: white;
+}
+
+/* zzzzzzzzzzzzz */
+
+.m {
+    padding-bottom: 67px;
+}
+
+/* zzzzzzzzzzzzz */
