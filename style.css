@@ -139,7 +139,7 @@ body {
     padding-bottom: 65px;
 }
 .page-section_mb_xs {
-    padding-bottom: 18px;
+    padding-bottom: 17px;
 }
 /* margin-bottom section */
 
@@ -245,14 +245,20 @@ body {
     padding-top: 48px;
     margin: 0 -10px;
 }
+
+/*---------- Independent section block bem LAYOUT-ITEM ----------*/
 .layout-item {
     display: flex;
     width: calc(33.33333333% - 20px);
     padding: 0 10px;
 }
+
+/* mixin layout-item in layout-3-column */
 .layout-item__layout-3-column {
     margin-bottom: 34px;
 }
+/* mixin layout-item in layout-3-column */
+
 .layout-item__img {
     margin-right: 21px;
 }
@@ -267,12 +273,14 @@ body {
     margin-left: -1px;
 }
 .layout-item:nth-child(3n+3) .layout-item__title {
-    margin-left: 2px;
+    margin-left: 1px;
 }
 .layout-item__subtitle {
     font-size: 12px;
     line-height: 1.8;
 }
+/*---------- Independent section block bem LAYOUT-ITEM ----------*/
+
 /*---------- Independent section block bem LAYOUT-3-COLUMN ----------*/
 
 /*---------- Independent section block bem TAG-LIST ----------*/
@@ -393,7 +401,7 @@ body {
     resize: none;
 }
 .form-question__input:nth-child(4) {
-    height: 201px;
+    height: 202px;
     box-sizing: border-box;
     color: #f48c8f;
     font-size: 12px;
@@ -401,6 +409,7 @@ body {
 }
 /*----- Independent section block bem FORM-QUESTION -----*/
 
+/*----- Independent section block bem CONTACT-INFO -----*/
 .contact-info {
     width: 34%;
     padding-left: 20px;
@@ -418,6 +427,9 @@ body {
     padding-top: 11px;
     margin-left: -1px;
 }
+/*----- Independent section block bem CONTACT-INFO -----*/
+
+/*----- Independent section block bem CONTACT -----*/
 .contact {
     padding-top: 28px;
     display: flex;
@@ -451,6 +463,7 @@ body {
 .contact-wrapper:last-child .img-wrapper img {
     margin-top: 2px;
 }
+/*----- Independent section block bem CONTACT -----*/
 
 /*----- Independent section block bem BUTTON -----*/
 .button {
