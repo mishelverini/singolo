@@ -596,3 +596,56 @@ input:valid:not([name=subject]) {
 /*- Modificator separator -*/
 
 /*---------- Independent section block bem SEPARATOR ----------*/
+/* .window-text {
+    width: 800px;
+    height: 550px;
+    background-color: #fff;
+    position: fixed;
+    left: 22.2vw;
+    top: 15vh;
+} */
+.phone-button-1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    left: 155px;
+    top: 405px;
+    opacity: 0;
+}
+.phone-button-2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    left: 390px;
+    top: 205px;
+    opacity: 0;
+}
+.black-screen-ver {
+    width: 190px;
+    height: 338px;
+    background-color: black;
+    position: absolute;
+    top: 65px;
+    left: 85px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.black-screen-hor {
+    width: 338px;
+    height: 192px;
+    background-color: black;
+    position: absolute;
+    top: 135px;
+    left: 442px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.opacity_true {
+    opacity: 1;
+}

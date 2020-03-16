@@ -104,3 +104,8 @@ function sLeft() {
         s2 = true;
     }
 }
+
+function screenSwich(selector) {
+    let screen = document.querySelector(selector);
+    screen.classList.toggle('opacity_true');
+}
