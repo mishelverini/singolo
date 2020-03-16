@@ -1,3 +1,18 @@
+window.onload = function () {
+    let arrTag = document.querySelectorAll('.tag-list__item');
+    for (let i = 0; i < arrTag.length; i++) {
+        arrTag[i].addEventListener('click', function (event) {
+            arrTag[i].classList.toggle('tag-list-item_active');
+        });
+    }
+    let arrImg = document.querySelectorAll('.gallery__item');
+    for(let i = 0; i < arrImg.length; i++) {
+        arrImg[i].addEventListener('click', function(event){
+            arrImg[i].classList.toggle('gallery__item_border_red');
+        });
+    }
+}
+
 let i = 0;
 let s1 = true;
 let s2 = true;
@@ -27,13 +42,6 @@ function sr(y) {
             break;
     }
     window.scrollTo(0, y);
-}
-
-let arrTag = document.querySelectorAll('.tag-list__item');
-for (let i = 0; i < arrTag.length; i++) {
-    arrTag[i].addEventListener('click', function (event) {
-        document.querySelectorAll('.tag-list__item')[i].classList.toggle('tag-list-item_active');
-    });
 }
 
 function filterGallery() {

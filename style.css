@@ -351,7 +351,9 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 187px 187px 187px;
 	grid-auto-rows: 0px;
-	overflow: hidden;
+    overflow: hidden;
+    margin: -5px;
+    padding: 5px;
 }
 /* mixin gallery in page-section */
 .page-section__gallery {
@@ -364,6 +366,17 @@ body {
 .gallery__item:nth-child(1n+13) {
 	margin-top: 1px;
 }
+/*- Modificator gallery__item -*/
+
+/* border */
+.gallery__item_border_red {
+    outline: #F06C64 solid 5px;
+    box-sizing: border-box;
+}
+/* border */
+
+/*- Modificator gallery__item -*/
+
 /*---------- Independent section block bem GALLERY ----------*/
 
 /*---------- Independent section block bem WORKERS ----------*/
