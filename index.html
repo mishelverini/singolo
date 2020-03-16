@@ -16,7 +16,7 @@
             </a>
             <nav class="header__navigation">
                 <ul class="navigation">
-                    <li class="navigation__item"><a href="#" class="navigation__link navigation__link_active">home</a>
+                    <li class="navigation__item"><a class="navigation__link navigation__link_active" onclick="sr(0)">home</a>
                     </li>
                     <li class="navigation__separator">·</li>
                     <li class="navigation__item"><a class="navigation__link" onclick="sr(600)">services</a></li>
@@ -130,10 +130,10 @@
                         lacinia odio sem nec elit.</p>
                 </div>
                 <ul class="tag-list page-section__tag-list">
-                    <li class="tag-list__item tag-list-item_active">All</li>
-                    <li class="tag-list__item">Web Design</li>
-                    <li class="tag-list__item">Graphic Design</li>
-                    <li class="tag-list__item">Artwork</li>
+                    <li class="tag-list__item tag-list-item_active" onclick="filterGallery()">All</li>
+                    <li class="tag-list__item" onclick="filterGallery()">Web Design</li>
+                    <li class="tag-list__item" onclick="filterGallery()">Graphic Design</li>
+                    <li class="tag-list__item" onclick="filterGallery()">Artwork</li>
                 </ul>
                 <div class="gallery page-section__gallery">
                     <img src="assets/image/gallery/01.png" alt="gallery-img" class="gallery__item">
