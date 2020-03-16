@@ -2,6 +2,10 @@ let i = 0;
 let s1 = true;
 let s2 = true;
 
+function sr(y) {
+    window.scrollTo(0, y);
+}
+
 let slideRight = function () {
 
     document.querySelectorAll('.slider_item').forEach(function (element) {
@@ -16,7 +20,6 @@ let slideRight = function () {
         if (s1) {
             i -= 10;
         }
-        console.log(i);
     });
 };
 
@@ -34,8 +37,6 @@ let slideLeft = function () {
         if (s2) {
             i += 10;
         }
-
-        console.log(i);
     });
 };
 
