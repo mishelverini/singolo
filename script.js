@@ -1,56 +1,7 @@
-window.onload = function () {
-    let arrTag = document.querySelectorAll('.tag-list__item');
-    for (let i = 0; i < arrTag.length; i++) {
-        arrTag[i].addEventListener('click', function (event) {
-            arrTag[i].classList.toggle('tag-list-item_active');
-        });
-    }
-    let arrImg = document.querySelectorAll('.gallery__item');
-    for(let i = 0; i < arrImg.length; i++) {
-        arrImg[i].addEventListener('click', function(event){
-            arrImg[i].classList.toggle('gallery__item_border_red');
-        });
-    }
-}
-
+//-------------------------------Slider-------------------------------//
 let i = 0;
 let s1 = true;
 let s2 = true;
-
-function sr(y) {
-    let a = document.querySelectorAll('.navigation__item a');
-    a.forEach(function (element) {
-        if (element.classList.contains('navigation__link_active')) {
-            element.classList.remove('navigation__link_active');
-        }
-    });
-    switch (y) {
-        case 0:
-            a[0].classList.add('navigation__link_active');
-            break;
-        case 600:
-            a[1].classList.add('navigation__link_active');
-            break;
-        case 1105:
-            a[2].classList.add('navigation__link_active');
-            break;
-        case 1970:
-            a[3].classList.add('navigation__link_active');
-            break;
-        case 2710:
-            a[4].classList.add('navigation__link_active');
-            break;
-    }
-    window.scrollTo(0, y);
-}
-
-function filterGallery() {
-    let arrImg = document.querySelectorAll('.gallery__item');
-    arrImg.forEach(function (element) {
-        let num = Math.floor(Math.random() * Math.floor(arrImg.length));
-        element.style.order = '' + num;
-    });
-}
 
 let slideRight = function () {
 
@@ -104,8 +55,63 @@ function sLeft() {
         s2 = true;
     }
 }
+//-------------------------------Slider-------------------------------//
 
+//-----------------------------Navigation-----------------------------//
+let navItemAddActive = function (event) {
+    console.log(event.target);
+    navItemRemoveActive('.navigation__item a', 'navigation__link_active');
+    event.target.classList.add('navigation__link_active');
+    scrollPage(event);
+};
+
+let navItemRemoveActive = function (tag, nameClass) {
+    document.querySelectorAll(tag).forEach(function (element) {
+        if (element.classList.contains(nameClass)) {
+            element.classList.remove(nameClass);
+        }
+    });
+};
+
+let scrollPage = function (event) {
+    let innerTextLink = event.target.textContent;
+    innerTextLink == 'home' ? window.scrollTo(0, 0) : '';
+    innerTextLink == 'services' ? window.scrollTo(0, 600) : '';
+    innerTextLink == 'portfolio' ? window.scrollTo(0, 1100) : '';
+    innerTextLink == 'about' ? window.scrollTo(0, 1970) : '';
+    innerTextLink == 'contact' ? window.scrollTo(0, 2704) : '';
+};
+
+document.querySelector('.navigation').addEventListener('click', navItemAddActive);
+//-----------------------------Navigation-----------------------------//
+
+//---------------------------Portfolio-Tag---------------------------//
+function filterGallery() {
+    let arrImg = document.querySelectorAll('.gallery__item');
+    arrImg.forEach(function (element) {
+        let num = Math.floor(Math.random() * Math.floor(arrImg.length));
+        element.style.order = '' + num;
+    });
+}
+
+let activeTag = function(event) {
+    event.target.classList.toggle('tag-list-item_active');
+    filterGallery();
+}
+document.querySelector('.tag-list').addEventListener('click', activeTag);
+//---------------------------Portfolio-Tag---------------------------//
+
+//------------------------------Gallery-----------------------------//
+let selectePhoto = function(event) {
+    event.target.classList.toggle('gallery__item_border_red');
+}
+
+document.querySelector('.gallery').addEventListener('click', selectePhoto);
+//------------------------------Gallery-----------------------------//
+
+//--------------------------Mobile-Swicher-------------------------//
 function screenSwich(selector) {
     let screen = document.querySelector(selector);
     screen.classList.toggle('opacity_true');
 }
+//--------------------------Mobile-Swicher-------------------------//
