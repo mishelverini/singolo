@@ -15,7 +15,7 @@ let slideRight = function () {
             return;
         }
         if (s1) {
-            i -= 10;
+            i -= 1;
         }
     });
 };
@@ -32,7 +32,7 @@ let slideLeft = function () {
             return;
         }
         if (s2) {
-            i += 10;
+            i += 5;
         }
     });
 };
@@ -59,7 +59,6 @@ function sLeft() {
 
 //-----------------------------Navigation-----------------------------//
 let navItemAddActive = function (event) {
-    console.log(event.target);
     navItemRemoveActive('.navigation__item a', 'navigation__link_active');
     event.target.classList.add('navigation__link_active');
     scrollPage(event);
@@ -103,7 +102,15 @@ document.querySelector('.tag-list').addEventListener('click', activeTag);
 
 //------------------------------Gallery-----------------------------//
 let selectePhoto = function(event) {
-    event.target.classList.toggle('gallery__item_border_red');
+    if(event.target == event.currentTarget) {
+        return;
+    }
+    if(event.target.classList.contains('gallery__item_border_red')) {
+        event.target.classList.toggle('gallery__item_border_red');
+    } else {
+        navItemRemoveActive('.gallery__item', 'gallery__item_border_red');
+        event.target.classList.toggle('gallery__item_border_red');
+    }
 }
 
 document.querySelector('.gallery').addEventListener('click', selectePhoto);
