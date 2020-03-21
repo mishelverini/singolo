@@ -94,6 +94,9 @@ function filterGallery() {
 }
 
 let activeTag = function(event) {
+    if(event.target == event.currentTarget) {
+        return;
+    }
     event.target.classList.toggle('tag-list-item_active');
     filterGallery();
 }
