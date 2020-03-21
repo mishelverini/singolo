@@ -115,3 +115,55 @@ function screenSwich(selector) {
     screen.classList.toggle('opacity_true');
 }
 //--------------------------Mobile-Swicher-------------------------//
+
+//--------------------------Form-------------------------//
+let visibilityAdd = function(element) {
+    document.querySelector(element).classList.remove('visibility');
+};
+
+let visibilityDel = function(element) {
+    document.querySelector(element).classList.add('visibility');
+};
+
+let dataOutputWindowText = function (){
+    let arrInput = getDataInput('.form-question__input');
+    if (arrInput[0].validity.valid && arrInput[1].validity.valid) {
+        visibilityAdd('.window-text');
+        let subjectText = arrInput[2].value.trim();
+        let textDescript = arrInput[3].value.trim();
+
+        let arrWindowTextItem = getDataInput('.window-text__item');
+
+        arrWindowTextItem[1].innerHTML = validationInput(subjectText, 1);
+        arrWindowTextItem[2].innerHTML = validationInput(textDescript, 2);
+    }
+};
+
+let validationInput = function(element, num) {
+    if(element.length == 0 && num == 1) {
+        return 'Без темы';
+    } else if (element.length == 0 && num == 2) {
+        return 'Без описания';
+    } else if (element.length != 0 && num == 1) {
+        return 'Тема:' + ' ' + element;
+    } else if (element.length != 0 && num == 2) {
+        return 'Описание:' + ' ' + element;
+    }
+}
+
+let getDataInput = function(element) {
+    return document.querySelectorAll(element);
+};
+
+let closeWindowText = function() {
+    visibilityDel('.window-text');
+    let arrInput = getDataInput('.form-question__input');
+    arrInput.forEach(function(element){
+        element.value = '';
+    });
+}
+
+document.querySelector('.feedback__button').addEventListener('click', dataOutputWindowText);
+document.querySelector('.window-text__button').addEventListener('click', closeWindowText);
+//--------------------------Form-------------------------//
+

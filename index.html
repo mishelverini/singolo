@@ -376,9 +376,8 @@
                         <input type="email" name="email" placeholder="Email (Required)" class="form-question__input"
                             pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" required>
                         <input type="text" name="subject" placeholder="Subject" class="form-question__input">
-                        <textarea name="discription" class="form-question__input">Describe your project in detail...
-                        </textarea>
-                        <button type="button" class="button">Send</button>
+                        <textarea name="discription" class="form-question__input" placeholder="Describe your project in detail..."></textarea>
+                        <button type="submit" class="button feedback__button" onclick="event.preventDefault()">Send</button>
                     </form>
                     <div class="contact-info">
                         <h2 class="contact-info__title">Contact Information</h2>
@@ -471,7 +470,14 @@
                     </svg>
                 </div>
             </footer>
-            <div class="window-text"></div>
+            <div class="window-text visibility">
+                <div class="window-text__text">
+                    <p class="window-text__item">Письмо отправлено</p>
+                    <p class="window-text__item">Lorem ipsum dolor sit.</p>
+                    <p class="window-text__item">Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <button type="button" class="button window-text__button">OK</button>
+            </div>
         </main>
     </div>
     <script src="script.js"></script>
