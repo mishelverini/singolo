@@ -86,7 +86,7 @@ document.querySelector('.navigation').addEventListener('click', navItemAddActive
 
 //---------------------------Portfolio-Tag---------------------------//
 function filterGallery() {
-    let arrImg = document.querySelectorAll('.gallery__item');
+    let arrImg = document.querySelectorAll('.gallery div');
     arrImg.forEach(function (element) {
         let num = Math.floor(Math.random() * Math.floor(arrImg.length));
         element.style.order = '' + num;
@@ -176,4 +176,41 @@ let closeWindowText = function() {
 document.querySelector('.feedback__button').addEventListener('click', dataOutputWindowText);
 document.querySelector('.window-text__button').addEventListener('click', closeWindowText);
 //--------------------------Form-------------------------//
+//--------------------------Window-Nav-------------------------//
+let windowNav = function() {
+    let windowShow = document.querySelector('.modal-window-nav');
+    windowShow.classList.toggle('opacity_true');
+    let burger = document.querySelector('.burger');
+    let logo = document.querySelector('.logo > div');
+
+    if(burger.classList.contains('transform')) {
+        burger.classList.add('transform-0');
+        burger.classList.remove('transform');
+    } else {
+        burger.classList.add('transform');
+        burger.classList.remove('transform-0');
+    }
+
+    if(logo.classList.contains('transform-logo')) {
+        logo.classList.add('transform-logo-0');
+        logo.classList.remove('transform-logo');
+    } else {
+        logo.classList.add('transform-logo');
+        logo.classList.remove('transform-logo-0');
+    }
+
+    // burger.classList.toggle('transform');
+    let burgerP = document.querySelectorAll('.burger div');
+    for (let i = 0; i < burger.length; i++) {
+        burger[i].classList.toggle('index-1');
+    }
+    document.querySelector('.over').classList.toggle('visibility');
+    windowShow.classList.add('index-0');
+
+    // document.querySelector('.logo > div').classList.toggle('transform-logo');
+}
+
+document.querySelector('.burger-menu').addEventListener('click', windowNav);
+
+//--------------------------Window-Nav-------------------------//
 

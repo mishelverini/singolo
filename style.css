@@ -156,7 +156,7 @@ body {
         padding: 55px 40px 66px;
     }
     .page-section_mb_xs {
-        padding: 56px 42px 66px;
+        padding: 56px 42px 39px;
     }
 }
 @media screen and (min-width: 375px) and (max-width: 767px) {
@@ -183,7 +183,7 @@ body {
 .header {
     position: sticky;
     box-sizing: border-box;
-    width: 100% - 40px;
+    width: 100%;
     top: 0;
     z-index: 99;
     height: 90px;
@@ -201,6 +201,7 @@ body {
     font-weight: 700;
     color: white;
     letter-spacing: -0.5px;
+    flex-grow: 1;
 }
 .logo__decoration {
     color: #f06c64;
@@ -237,17 +238,110 @@ body {
     margin: 0 12px;
     color: #494e62;
 }
+.burger {
+    display: none;
+    flex-grow: 0;
+}
+.transform-0 {
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+}
+.transform {
+    transform: rotate(90deg);
+    transition: transform 0.5s;
+}
+.transform-logo-0 {
+    transform: translate(0, 0);
+    transition: transform 0.5s;
+}
+.transform-logo {
+    transform: translate(-80px, -5px);
+    transition: transform 0.5s;
+}
+.modal-window-nav {
+    opacity: 0;
+}
+
 /*----- Independent section block bem NAVIGATION -----*/
 @media screen and (min-width: 768px) and (max-width: 1019px) {
-
+    .navigation {
+        padding-top: 0;
+    }
+    .modal-window-nav {
+        opacity: 0;
+    }
 }
 @media screen and (min-width: 375px) and (max-width: 767px) {
+    .header {
+        flex-grow: 1;
+        justify-content: space-between;
+    }
+    .logo {
+        flex-grow: 1;
+        padding-top: 9px;
+        margin-left: 5px;
+        font-size: 19.68px;
+        z-index: 2;
+    }
+    .logo > div {
+        display: flex;
+        justify-content: center;
+    }
     .header {
         height: 65px;
     }
     .navigation {
         display: none;
     }
+    .modal-window-nav {
+        width: 80vw;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        /* top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0; */
+        background-color: #2D303A;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        transition: 0.5s;
+        /* transition: transform 2s; */
+        opacity: 0;
+        z-index: 0;
+    }
+    .modal-window-nav__nav {
+        margin-top: 25vh;
+        margin-left: 17vw;
+        color: white;
+    }
+    .modal-window-nav__item {
+        font-size: 24px;
+        letter-spacing: -0.035em;
+        text-transform: uppercase;
+        margin-bottom: 27px;
+    }
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25px;
+        height: 20px;
+        padding-top: 7px;
+        margin-left: -20px;
+        z-index: 2;
+    }
+    
+    .burger > div {
+        width: 25px;
+        height: 2.4px;
+        background-color: white;
+        z-index: 2;
+    }
+    /* .row {
+        flex-direction: row;
+        justify-content: space-evenly;
+    } */
 }
 
 /*---------- Independent section block bem HEADER ----------*/
@@ -507,7 +601,7 @@ body {
 
 /* border */
 .gallery__item_border_red {
-    outline: #F06C64 solid 5px;
+    border: #F06C64 solid 5px;
     box-sizing: border-box;
 }
 /* border */
@@ -750,6 +844,11 @@ body {
     .page-section_mb_xs {
         padding-right: 20px;
     }
+    .form-question__input:nth-child(4) {
+        height: 160px;
+        margin-bottom: 16px;
+
+    }
 }
 @media screen and (min-width: 375px) and (max-width: 767px) {
     .feedback {
@@ -789,22 +888,25 @@ body {
 
 /*----- Independent section block bem BUTTON -----*/
 .button {
-    background-color: #2d303a;
-    color: #f0d8d9;
+    background-color: #fbc65f;
+    color: #886a30;
     border: none;
     border-radius: 5px;
-    width: 100%;
-    padding: 10px 0;
+    /* width: 100%; */
+    padding: 11px 47px;
     font-size: 14px;
     font-weight: 300;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.9px;
 }
 @media screen and (min-width: 768px) and (max-width: 1019px) {
-
+    .button {
+        margin-left: -3px;
+    }
 }
 @media screen and (min-width: 375px) and (max-width: 767px) {
     .button {
+        width: 100%;
         padding: 16px 0;
     }
 }
@@ -916,6 +1018,8 @@ input:valid:not([name=subject]) {
 .visibility {
     display: none;
 }
+
+
 /*---------- Independent section block bem WINDOW-TEXT ----------*/
 
 .phone-button-1 {
@@ -963,36 +1067,22 @@ input:valid:not([name=subject]) {
 .opacity_true {
     opacity: 1;
 }
-
+.over {
+    height: 550vh;
+    background-color: #323746;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+.index-1 {
+    z-index: 10;
+}
+.index-0 {
+    z-index: -1;
+}
 /*-------------------- Responsive --------------------*/
-@media screen and (min-width: 768px) and (max-width: 1019px) {
-    /* .layout-item {
-        display: flex;
-        flex-grow: 1;
-        width: calc(50% - 53px);
-        padding: 0 0;
-        margin-right: 53px;
-    }
-    .gallery {
-        display: grid;
-        grid-gap: 20px;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 187px 187px 187px 187px;
-        grid-auto-rows: 0px;
-        overflow: hidden;
-        margin: -5px;
-        padding: 5px;
-    }
-    .page-section__gallery {
-        margin-top: 15px;
-    } */
-}
-
-@media screen and (min-width: 375px) and (max-width: 767px) {
-
-
-
-
-
-}
 /*-------------------- Responsive --------------------*/
