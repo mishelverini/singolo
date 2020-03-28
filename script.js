@@ -179,7 +179,7 @@ document.querySelector('.window-text__button').addEventListener('click', closeWi
 //--------------------------Window-Nav-------------------------//
 let windowNav = function() {
     let windowShow = document.querySelector('.modal-window-nav');
-    windowShow.classList.toggle('opacity_true');
+    windowShow.classList.toggle('visibility');
     let burger = document.querySelector('.burger');
     let logo = document.querySelector('.logo > div');
 

@@ -239,7 +239,6 @@ body {
     color: #494e62;
 }
 .burger {
-    display: none;
     flex-grow: 0;
 }
 .transform-0 {
@@ -259,7 +258,7 @@ body {
     transition: transform 0.5s;
 }
 .modal-window-nav {
-    opacity: 0;
+    display: none;
 }
 
 /*----- Independent section block bem NAVIGATION -----*/
@@ -268,7 +267,7 @@ body {
         padding-top: 0;
     }
     .modal-window-nav {
-        opacity: 0;
+        display: none;
     }
 }
 @media screen and (min-width: 375px) and (max-width: 767px) {
@@ -306,9 +305,8 @@ body {
         background-color: #2D303A;
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
         transition: 0.5s;
-        /* transition: transform 2s; */
-        opacity: 0;
-        z-index: 0;
+        display: block;
+        z-index: 1;
     }
     .modal-window-nav__nav {
         margin-top: 25vh;
@@ -336,12 +334,8 @@ body {
         width: 25px;
         height: 2.4px;
         background-color: white;
-        z-index: 2;
+        z-index: 0;
     }
-    /* .row {
-        flex-direction: row;
-        justify-content: space-evenly;
-    } */
 }
 
 /*---------- Independent section block bem HEADER ----------*/
