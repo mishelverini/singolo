@@ -268,7 +268,7 @@ body {
     transition: transform 0.5s;
 }
 .transform-logo {
-    transform: translate(-80px, -5px);
+    transform: translate(-27.5vw, -5px);
     transition: transform 0.5s;
 }
 .modal-window-nav {
@@ -501,7 +501,7 @@ body {
     cursor: pointer;
     left: 194px;
     top: 457px;
-    opacity: 1;
+    opacity: 0;
 }
 .phone-button-2 {
     position: absolute;
@@ -512,7 +512,7 @@ body {
     cursor: pointer;
     left: 430px;
     top: 256px;
-    opacity: 1;
+    opacity: 0;
 }
 .black-screen-ver {
     width: 192px;
