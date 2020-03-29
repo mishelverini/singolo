@@ -1,60 +1,105 @@
 //-------------------------------Slider-------------------------------//
-let i = 0;
-let s1 = true;
-let s2 = true;
+// let i = 0;
+// let s1 = true;
+// let s2 = true;
 
+// let slideRight = function () {
+
+//     document.querySelectorAll('.slider_item').forEach(function (element) {
+
+//         element.style.left = `${i}px`;
+
+//         if (element.style.left === '-940px') {
+//             s1 = false;
+//             clearInterval(slideRight);
+//             return;
+//         }
+//         if (s1) {
+//             i -= 1;
+//         }
+//     });
+// };
+
+// let slideLeft = function () {
+
+//     document.querySelectorAll('.slider_item').forEach(function (element) {
+
+//         element.style.left = `${i}px`;
+
+//         if (element.style.left === '0px') {
+//             s2 = false;
+//             clearInterval(slideLeft);
+//             return;
+//         }
+//         if (s2) {
+//             i += 5;
+//         }
+//     });
+// };
+
+// function sRight() {
+//     if (i == -940) {
+//         document.querySelectorAll('.slider_item').forEach(element => element.style.left = '0px');
+//         i = 0;
+//     } else {
+//         setInterval(slideRight, 1);
+//         s1 = true;
+//     }
+// }
+// function sLeft() {
+//     if (i == 0) {
+//         document.querySelectorAll('.slider_item').forEach(element => element.style.left = '-940px');
+//         i = -940;
+//     } else {
+//         setInterval(slideLeft, 1);
+//         s2 = true;
+//     }
+// }
+
+let transformSlider = 0;
+
+let trans = 0;
+let c = 0;
 let slideRight = function () {
-
-    document.querySelectorAll('.slider_item').forEach(function (element) {
-
-        element.style.left = `${i}px`;
-
-        if (element.style.left === '-940px') {
-            s1 = false;
-            clearInterval(slideRight);
-            return;
-        }
-        if (s1) {
-            i -= 1;
-        }
-    });
+    let arrSlides = document.querySelectorAll('.slider_item');
+    ++c;
+    if (arrSlides.length == c) {
+        trans = 0;
+        c = 0;
+    } else {
+        trans -= 100;
+    }
+    let tt = `${trans}` + '%';
+    let strTransform = `transform: translate(${tt}, 0); transition: transform 1s`;
+    for (let i = 0; i < arrSlides.length; i++) {
+        arrSlides[i].style = strTransform;
+    }
 };
 
-let slideLeft = function () {
-
-    document.querySelectorAll('.slider_item').forEach(function (element) {
-
-        element.style.left = `${i}px`;
-
-        if (element.style.left === '0px') {
-            s2 = false;
-            clearInterval(slideLeft);
-            return;
-        }
-        if (s2) {
-            i += 5;
-        }
-    });
-};
+let slideLeft = function() {
+    let arrSlides = document.querySelectorAll('.slider_item');
+    if (c == 0) {
+        trans = (arrSlides.length * 100 * -1) + 100;
+        c = arrSlides.length;
+        --c;
+    } else {
+        --c;
+        trans += 100;
+    }
+    let tt = `${trans}` + '%';
+    let strTransform = `transform: translate(${tt}, 0); transition: transform 1s`;
+    for (let i = 0; i < arrSlides.length; i++) {
+        arrSlides[i].style = strTransform;
+    }
+}
 
 function sRight() {
-    if (i == -940) {
-        document.querySelectorAll('.slider_item').forEach(element => element.style.left = '0px');
-        i = 0;
-    } else {
-        setInterval(slideRight, 1);
-        s1 = true;
-    }
+    slideRight();
 }
 function sLeft() {
-    if (i == 0) {
-        document.querySelectorAll('.slider_item').forEach(element => element.style.left = '-940px');
-        i = -940;
-    } else {
-        setInterval(slideLeft, 1);
-        s2 = true;
-    }
+    slideLeft();
 }
+
 //-------------------------------Slider-------------------------------//
 
 //-----------------------------Navigation-----------------------------//
@@ -121,6 +166,7 @@ document.querySelector('.gallery').addEventListener('click', selectePhoto);
 
 //--------------------------Mobile-Swicher-------------------------//
 function screenSwich(selector) {
+    console.log('Hello!');
     let screen = document.querySelector(selector);
     screen.classList.toggle('opacity_true');
 }
