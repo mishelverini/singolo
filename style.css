@@ -434,7 +434,7 @@ body {
 /*---------- Independent section block bem SLIDER ----------*/
 .slider {
     display: flex;
-    height: 58.2vw;
+    height: 594px;
     justify-content: center;
     overflow: hidden;
     position: relative;
@@ -465,7 +465,7 @@ body {
 .slider-buttoms {
     position: absolute;
     display: flex;
-    height: 58.2vw;
+    height: 594px;
     /* flex-grow: 1; */
     width: calc(100% - 80px);
     padding: 0 40px;
@@ -485,54 +485,54 @@ body {
     cursor: pointer;
 }
 .slider__phone-vertical {
-    margin-top: -0.2vw;
-    margin-left: 11vw;
+    margin-top: -2px;
+    margin-left: 112px;
 }
 .slider__phone-horizontal {
-    margin-left: 41.7vw;
-    margin-top: -0.3vw;
+    margin-left: 425px;
+    margin-top: -3px;
 }
 .phone-button-1 {
     position: absolute;
     background-color: black;
-    width: 5vw;
-    height: 5vw;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     cursor: pointer;
-    left: 19vw;
-    top: 44.7vw;
-    opacity: 0;
+    left: 194px;
+    top: 457px;
+    opacity: 1;
 }
 .phone-button-2 {
     position: absolute;
     background-color: black;
-    width: 5vw;
-    height: 5vw;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     cursor: pointer;
-    left: 42vw;
-    top: 25vw;
-    opacity: 0;
+    left: 430px;
+    top: 256px;
+    opacity: 1;
 }
 .black-screen-ver {
-    width: 18.8vw;
-    height: 33.2vw;
+    width: 192px;
+    height: 340px;
     background-color: black;
     position: absolute;
-    top: 11.2vw;
-    left: 12.2vw;
-    border-radius: 0.5vw;
+    top: 115px;
+    left: 124px;
+    border-radius: 5px;
     opacity: 0;
     transition: 0.5s;
 }
 .black-screen-hor {
-    width: 33vw;
-    height: 19vw;
+    width: 337px;
+    height: 192px;
     background-color: black;
     position: absolute;
-    top: 18.2vw;
-    left: 47.4vw;
-    border-radius: 0.5vw;
+    top: 186px;
+    left: 483px;
+    border-radius: 5px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -627,6 +627,30 @@ body {
         margin-left: 41.5vw;
         margin-top: 0.3vw;
     }
+    .phone-button-1 {
+        width: 4.5vw;
+        height: 4.5vw;
+        left: 19.3vw;
+        top: 45vw;
+    }
+    .phone-button-2 {
+        width: 4.5vw;
+        height: 4.5vw;
+        left: 42.2vw;
+        top: 26vw;
+    }
+    .black-screen-ver {
+        width: 19vw;
+        height: 33vw;
+        top: 11.5vw;
+        left: 12vw;
+    }
+    .black-screen-hor {
+        width: 33.2vw;
+        height: 18.8vw;
+        top: 18.4vw;
+        left: 47.3vw;
+    }
 }
 @media screen and (max-width: 374px) {
     .slider {
@@ -665,6 +689,30 @@ body {
     .slider__phone-horizontal {
         margin-left: 41.5vw;
         margin-top: 0.3vw;
+    }
+    .phone-button-1 {
+        width: 4.5vw;
+        height: 4.5vw;
+        left: 19.3vw;
+        top: 45vw;
+    }
+    .phone-button-2 {
+        width: 4.5vw;
+        height: 4.5vw;
+        left: 42.2vw;
+        top: 26vw;
+    }
+    .black-screen-ver {
+        width: 19vw;
+        height: 33vw;
+        top: 11.5vw;
+        left: 12vw;
+    }
+    .black-screen-hor {
+        width: 33.2vw;
+        height: 18.8vw;
+        top: 18.4vw;
+        left: 47.3vw;
     }
 }
 /*---------- Independent section block bem SLIDER ----------*/
