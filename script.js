@@ -109,12 +109,28 @@ let navItemAddActive = function (event) {
     scrollPage(event);
 };
 
+let navBurgerActice = function(event) {
+    navItemRemoveActive('.modal-window-nav__item a', 'navigation__link_active');
+    event.target.classList.add('navigation__link_active');
+    scrollPageBurger(event);
+    windowNav();
+}
+
 let navItemRemoveActive = function (tag, nameClass) {
     document.querySelectorAll(tag).forEach(function (element) {
         if (element.classList.contains(nameClass)) {
             element.classList.remove(nameClass);
         }
     });
+};
+
+let scrollPageBurger = function (event) {
+    let innerTextLink = event.target.textContent;
+    innerTextLink == 'home' ? window.scrollTo(0, 0) : '';
+    innerTextLink == 'services' ? window.scrollTo(0, 250) : '';
+    innerTextLink == 'portfolio' ? window.scrollTo(0, 1190) : '';
+    innerTextLink == 'about' ? window.scrollTo(0, 1970) : '';
+    innerTextLink == 'contact' ? window.scrollTo(0, 3877) : '';
 };
 
 let scrollPage = function (event) {
@@ -127,6 +143,7 @@ let scrollPage = function (event) {
 };
 
 document.querySelector('.navigation').addEventListener('click', navItemAddActive);
+document.querySelector('.modal-window-nav__nav').addEventListener('click', navBurgerActice);
 //-----------------------------Navigation-----------------------------//
 
 //---------------------------Portfolio-Tag---------------------------//

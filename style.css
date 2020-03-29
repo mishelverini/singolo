@@ -178,7 +178,7 @@ body {
         padding: 30px 32px 21px;
     }
     .page-section_mb_m {
-        padding: 45px 31px 8px;
+        padding: 45px 40px 8px;
     }
     .page-section_mb_s {
         padding: 37px 30px 25px;
@@ -333,10 +333,14 @@ body {
         color: white;
     }
     .modal-window-nav__item {
+        margin-bottom: 27px;
+    }
+    .modal-window-nav__item a {
         font-size: 24px;
+        line-height: 29px;
         letter-spacing: -0.035em;
         text-transform: uppercase;
-        margin-bottom: 27px;
+
     }
     .burger {
         display: flex;
@@ -403,10 +407,12 @@ body {
         color: white;
     }
     .modal-window-nav__item {
+        margin-bottom: 27px;
+    }
+    .modal-window-nav__item a {
         font-size: 24px;
         letter-spacing: -0.035em;
         text-transform: uppercase;
-        margin-bottom: 27px;
     }
     .burger {
         display: flex;
@@ -960,7 +966,7 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1019px) {
     .gallery {
         display: grid;
-        grid-gap: 16px;
+        grid-gap: 20px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 187px 187px 187px 187px;
         grid-auto-rows: 0px;
