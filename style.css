@@ -473,13 +473,15 @@ body {
     align-items: center;
 }
 .s-left {
-    width: 2%;
+    width: 16px;
+    height: 27px;
 }
 .s-left:hover {
     cursor: pointer;
 }
 .s-right {
-    width: 2%;
+    width: 16px;
+    height: 27px;
 }
 .s-right:hover {
     cursor: pointer;
@@ -543,6 +545,14 @@ body {
     .slider-buttoms {
         height: 58vw;
     }
+    .s-left {
+        width: 16px;
+        height: 28px;
+    }
+    .s-right {
+        width: 16px;
+        height: 28px;
+    }
     .slider_item img {
         width: 100%;
     }
@@ -597,12 +607,14 @@ body {
         height: 57.4vw;
     }
     .s-left {
-        width: 5%;
+        width: 14px;
+        height: 25px;
         margin-left: -31px;
         margin-top: 8px;
     }
     .s-right {
-        width: 5%;
+        width: 14px;
+        height: 25px;
         margin-right: -31px;
         margin-top: 8px;
     }
@@ -660,12 +672,14 @@ body {
         height: 57.4vw;
     }
     .s-left {
-        width: 5%;
+        width: 14px;
+        height: 25px;
         margin-left: -31px;
         margin-top: 8px;
     }
     .s-right {
-        width: 5%;
+        width: 14px;
+        height: 25px;
         margin-right: -31px;
         margin-top: 8px;
     }
